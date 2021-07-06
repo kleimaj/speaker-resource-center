@@ -1,0 +1,80 @@
+// login.scss
+
+.login {
+	background-color: $md-blue;
+	border: 1px solid $black;
+	@include border-radius($border-radius);
+	box-shadow: 0 0 1rem $black;
+	display: block;
+	margin: 15vh auto 0 auto;
+	width: 50%;
+	padding: 1em 2em;
+	
+	h1 {
+		font-size: 1.15em;
+		border-bottom: 1px solid $lt-blue;
+		text-align: center;
+		line-height: 2em;
+	}
+	
+	p {
+		text-align: center;
+		width: 100%;
+		margin-top: 1em;
+	}
+	
+	form {
+		padding: 1em 0;
+		
+		label,
+		input,
+		button {
+			display: block;
+			font-family: $century-gothic;
+		}
+		
+		label {
+			margin: .5em 0 .25em 0;
+		}
+		
+		input {
+			border: 0;
+			background-color: $black;
+			padding: .5em 1em;
+			width: 100%;
+		}
+		
+		button {
+			background: rgb(21,60,79);
+			background: -moz-radial-gradient(center, ellipse cover,  $md-blue 10%, $lt-blue 90%) center;
+			background: -webkit-radial-gradient(center, ellipse cover,  $md-blue 10%, $lt-blue 90%) center;
+			background: radial-gradient(ellipse at center,  $md-blue 10%, $lt-blue 90%) center;	
+			background-size: 350% 500%;
+			border: 1px solid $lt-blue;
+			color: $white;
+			@include border-radius($border-radius);
+			padding: .5em 0;
+			width: 100%;
+			margin: 3em 0 0 0;
+			cursor: pointer;
+			
+			&:hover {
+				filter: drop-shadow(0 0 5px rgba($lt-blue,1));
+			}
+		}
+		
+		a.forgot-pw {
+			font-size: .7em;
+			text-align: right;
+			float: right;
+		}
+		
+		.error-msg {
+			display: block;
+			font-size: .7em;
+			text-align: left;
+			color: $white;
+			line-height: 1.25em;
+		}
+	}
+}

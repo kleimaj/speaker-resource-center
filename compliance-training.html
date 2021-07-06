@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<title>Speaker Bureau Resources</title>
+	<!-- videoJS -->
+	<link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/main.css">
+	<!-- jQuery 1.12 -->
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	<!-- TweenMax -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+	<!--- Custom Scripts -->
+	<script type="text/javascript" src="js/custom-scripts.js"></script>
+	
+	<!-- OG Meta Tags -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="">
+	<meta property="og:url" content="">
+
+	<!-- Twitter Meta Tags -->
+	<meta name="twitter:title" content="">
+	
+	<!-- favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+</head>
+
+<body>
+	
+	<header>
+		<a href="#"><img class="logo" src="images/src-logo.svg"></a>
+		<ul class="header-nav">
+			<li>
+				<form>
+					<input class="search" type="text">
+				</form>
+			</li>
+			<li><a class="help-btn" href="#"><img src="images/help.svg">HELP</a></li>
+			<li>
+				<a class="acct-btn" href="#"><img src="images/account.svg">ACCOUNT</a>
+			</li>
+		</div>
+	</header>
+	
+	<nav>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Updates from AMGEN</a></li>
+			<li><a href="#">Medication Presentation Resources</a></li>
+			<li><a href="#">Compliance Training</a></li>
+		</ul>
+	</nav>
+	
+	<div id="content-area">
+		<h1>Compliance Training</h1>
+		<h3>Stay up-to-date with the latest AMGEN compliance training.</h3>
+		
+		<ul class="filters"></ul>
+		
+		<ul id="training-headers">
+			<li>Action</li>
+			<li>Activity Name</li>
+			<li>Status</li>
+			<li>Completion Date</li>
+			<li>Due Date</li>
+			<li>Signature Status</li>
+		</ul>
+		<ul id="training-list">
+			<li>
+				<ul>
+					<li><a href="#">START</a></li>
+					<li>Compliance Training Manual</li>
+					<li>In Progress</li>
+					<li>Pending</li>
+					<li>6/25/21</li>
+					<li>Signature Pending</li>
+				</ul>
+			</li>
+			<li>
+				<ul>
+					<li><a href="#">START</a></li>
+					<li>Compliance Training Manual</li>
+					<li>In Progress</li>
+					<li>Pending</li>
+					<li>6/25/21</li>
+					<li>Signature Pending</li>
+				</ul>
+			</li>
+			<li>
+				<ul>
+					<li><a href="#">START</a></li>
+					<li>Compliance Training Manual</li>
+					<li>In Progress</li>
+					<li>Pending</li>
+					<li>6/25/21</li>
+					<li>Signature Pending</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	
+	<footer>
+		<p>For more information on Amgen's HCP portal, visit <a href="#">AmgenPMO HCP Portal</a>.</p>
+		<p>Class V: Amgen Confidential Speaker Training Materials. You may not copy or forward this information.</p>
+	</footer>
+	
+	<div id="shader"></div>
+	
+	<ul id="account-menu" class="header-menu">
+		<li><a class="quick-view-profile" href="#">View Profile</a></li>
+		<li><a class="logout" href="#">Logout</a></li>
+	</ul>
+	
+	<div id="profile-quick-view" class="header-menu">
+		<a class="menu-close" href="#"><img src="images/close.svg"></a>
+		<h1>Profile</h1>
+		<ul class="profile-info">
+			<li>Email Address<span class="email">ericr@communicationpartners.com</span></li>
+			<li>Full Name<span class="name">Eric Ralls</span></li>
+			<li>Affiliation<span class="affiliation">AMGEN</span></li>
+			<li>Speaker Bureau<span class="bureau">Evenity<sup>&trade;</sup>, Prolia<sup>&trade;</sup></span></li>
+		</ul>
+		<ul class="buttons">
+			<li><a href="#">Edit Profile <i class="fas fa-angle-double-right"></i></a></li>
+			<li><a href="#">Change Password <i class="fas fa-angle-double-right"></i></a></li>
+		</ul>
+	</div>
+	
+	<div id="change-password" class="modal">
+		<a class="modal-close" href="#"><img src="images/close.svg"></a>
+		<h1>Change Password</h1>
+		<form>
+			<div class="full-width">
+				<label>Current Password</label>
+				<input type="text" placeholder="Enter your current password">
+			</div>
+			<div class="full-width">
+				<label>New Password</label>
+				<input type="text" placeholder="Enter your new password">
+			</div>			
+			<ul class="buttons">
+				<li><button>Cancel <i class="fas fa-angle-double-right"></i></button></li>
+				<li><button>Save <i class="fas fa-angle-double-right"></i></button></li>
+			</ul>
+		</form>
+	</div>
+	
+	<div id="edit-profile" class="modal">
+		<a class="modal-close" href="#"><img src="images/close.svg"></a>
+		<h1>Edit Profile</h1>
+		<form>
+			<div class="full-width">
+				<label>Email Address</label>
+				<input type="text" value="Email Address">
+			</div>
+			<div class="half-width">
+				<label>Full Name</label>
+				<input type="text" value="Full Name">
+			</div>
+			<div class="half-width">
+				<label>Affiliation</label>
+				<input type="text" value="Affiliation">
+			</div>
+			<div class="full-width">
+				<label>Speaker Bureau <span>*Contact your administrator to update your information</span></label>
+				<p>Evenity<sup>&trade;</sup>, Prolia<sup>&trade;</sup></p>
+			</div>
+			<ul class="buttons">
+				<li><button>Cancel <i class="fas fa-angle-double-right"></i></button></li>
+				<li><button>Save <i class="fas fa-angle-double-right"></i></button></li>
+			</ul>
+		</form>
+	</div>
+	
+	<div id="video-container">
+		<video id="speaker-video" class="video-js vjs-big-play-centered vjs-fluid" controls preload="auto" data-setup="{}" poster="assets/bob5.png">
+			<source src="assets/bob.mp4" type="video/mp4">
+		</video>
+		<a class="video-close" href="#"><img src="images/close.svg"></a>
+	</div>
+
+	<script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>		 
+	
+</body>
+</html>

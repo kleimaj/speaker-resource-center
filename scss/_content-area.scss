@@ -1,0 +1,290 @@
+// content-area.scss
+
+#content-area {
+	min-height: 72vh;
+	padding: 1em 2em;
+	
+	> h1 {
+		font-size: 1.75em;
+		width: 100%;
+		line-height: 1.5em;
+		
+		&.welcome {	
+			text-align: center;
+		}
+	}
+	
+	> h2 {
+		text-align: center;
+		width: 50%;
+		margin: 0 auto;
+	}
+	
+	> h3 {
+		font-size: .7em;
+		text-align: left;
+		color: $white;
+	}
+	
+	.deck-series {
+		background-color: $black;
+		padding: 1em 0;
+		margin-bottom: 2em;
+		display: flex;
+		flex-direction: row;
+
+		.deck-description,
+		.deck-videos {
+			padding: 2vh 2vw; 
+		}
+
+
+		.deck-description {
+			width: 20vw;
+			flex-basis: auto;
+			text-align: right;
+			border-right: 1px solid $lt-blue;
+
+			h2 {
+				font-size: .8em;
+				margin-top: 1em;
+			}
+		}
+
+		.deck-videos {
+			text-align: left;
+			flex-grow: 2;
+
+			.video-list {
+
+				a {
+					display: inline-block;
+					width: 16vw;
+					margin: 0 2vw 0 0;
+
+					> div {
+						position: relative;
+						//@include border-radius($border-radius);
+
+						
+						&:before {
+							content: '\f04b';
+							font-family: $fa;
+							display: block;
+							width: 100%;
+							height: 100%;
+							position: absolute;
+							top: 0;
+							left: 0;
+							background-color: rgba($white,.3);
+							color: $white;
+							text-align: center;
+							font-weight: 700;
+							font-size: 2.5em;
+							line-height: calc(16vw * (9 / 16));
+						}
+
+						span {
+							position: absolute;
+							font-size: .5em;
+							color: $dk-blue;
+							right: 0;
+							bottom: 1em;
+							background-color: $lt-blue-2;
+							padding: .25em .5em;
+							font-weight: 600;
+						}
+					}
+
+					h2,
+					h3 {
+						color: $white;
+					}
+
+					h2 {
+						text-transform: uppercase;
+					}
+
+					h3 {
+						font-weight: 600;
+					}
+
+					h4 {
+						font-size: .8em;
+						margin-top: 1em;
+					}
+				}
+
+			}
+		}
+
+		h1 {
+			display: block;
+			font-weight:700;
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			@include border-radius($border-radius);
+			margin: .5em 0;
+		}
+
+	}
+}
+
+#update-list {
+	width: 100%;
+	background-color: $black;
+	padding: 2em 1em;
+	
+	li {
+		margin-bottom: 1em;
+		
+		a {
+			display: block;
+			@include radial-gradient($md-blue,$lt-blue-2);
+			background-size: 250% 250%;
+			border: 1px solid $lt-blue-2;
+			@include border-radius($border-radius);
+			padding: 1em 2em;
+			
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: space-between;
+		}
+	}
+}
+
+#file-list {
+	width: 100%;
+	background-color: $black;
+	padding: 2em 1em;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	
+	
+	li {
+		margin: 0 1em 1em 0;
+		width: 20vw;
+		
+		a {
+			display: block;
+			min-height: 4em;
+			@include radial-gradient($md-blue,$lt-blue-2);
+			background-size: 250% 250%;
+			border: 1px solid $lt-blue-2;
+			@include border-radius($border-radius);
+			padding: 1em;
+			position: relative;
+			text-align: center;
+			
+			span {
+				font-size: .7em;
+				display: block;
+				width: 100%;
+				margin-top: 3em;
+			}
+		}
+	}
+}
+
+
+ul#training-headers {
+	padding: 1rem 2rem;
+	display: block;
+	text-align: center;
+	font-size: 0;
+	
+	li {
+		display: inline-block;
+		vertical-align: baseline;
+		font-size: .7rem;
+	}
+}
+
+ul#training-list {
+	position: relative;
+	margin-top: .5em;
+	text-align: center;
+	
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		@include transform(translate(-50%,-50%));
+		width: 95%;
+		height: 110%;
+		background-color: $black;
+		z-index: -1;
+	}
+	
+	> li {
+		display: block;
+		@include radial-gradient($md-blue,$lt-blue-2);
+		background-size: 250% 250%;
+		border: 1px solid $lt-blue-2;
+		@include border-radius($border-radius);
+		padding: 1rem 2rem;
+		margin-bottom: 1rem;
+		font-size: 0;
+
+		
+		> ul {
+			display: block;
+			
+			> li {
+				display: inline-block;
+				vertical-align: middle;
+				font-size: 1rem;
+				
+				a {
+					display: block;
+					@include radial-gradient($lt-blue,$lt-blue-2);
+					background-size: 200% 200%;
+					background-position: center;
+					text-align: center;
+					border: 1px solid $lt-blue;
+					padding: .25em 1em;
+					color: $md-blue;
+					font-weight: 600;
+					@include border-radius($border-radius);
+				}
+			}
+		}
+	}
+}
+
+ul#training-headers > li,
+ul#training-list > li > ul > li {
+	&:nth-of-type(1) {
+		width: 8%;
+	}
+	
+	&:nth-of-type(2) {
+		width: 42%;
+		padding: 0 2%;
+	}
+	
+	&:nth-of-type(3) {
+		width: 20%;
+	}
+	
+	&:nth-of-type(4) {
+		width: 10%;
+	}
+	
+	&:nth-of-type(5) {
+		width: 10%;
+	}
+	
+	&:nth-of-type(6) {
+		width: 10%;
+	}
+	
+}
